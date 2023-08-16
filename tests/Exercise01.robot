@@ -12,3 +12,4 @@ Automation Exercise
 #pip install robotframework
 #pip install robotframework-seleniumlibrary
 #pip install webdrivermanager
+#pip install selenium==4.9.1
