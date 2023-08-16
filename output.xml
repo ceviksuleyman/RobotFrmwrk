@@ -1,198 +1,115 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20230816 22:25:47.685" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20230816 22:58:50.554" rpa="false" schemaversion="4">
 <suite id="s1" name="RobotFramework" source="C:\Users\User\PycharmProjects\RobotFramework">
 <suite id="s1-s1" name="Tests" source="C:\Users\User\PycharmProjects\RobotFramework\tests">
 <suite id="s1-s1-s1" name="Exercise02" source="C:\Users\User\PycharmProjects\RobotFramework\tests\Exercise02.robot">
-<test id="s1-s1-s1-t1" name="LoginTest" line="11">
+<test id="s1-s1-s1-t1" name="LoginTest" line="12">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${BASE_URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230816 22:25:47.983" level="INFO">Opening browser 'chrome' to base url 'https://www.automationexercise.com/'.</msg>
-<msg timestamp="20230816 22:25:48.520" level="WARN">The chromedriver version (114.0.5735.90) detected in PATH at C:\Users\User\AppData\Local\Programs\Python\Python311\Scripts\chromedriver.exe might not be compatible with the detected chrome version (115.0.5790.171); currently, chromedriver 115.0.5790.170 is recommended for chrome 115.*, so it is advised to delete the driver in PATH and retry</msg>
-<status status="PASS" starttime="20230816 22:25:47.983" endtime="20230816 22:25:59.672"/>
+<msg timestamp="20230816 22:58:50.957" level="INFO">Opening browser 'chrome' to base url 'https://www.automationexercise.com/'.</msg>
+<msg timestamp="20230816 22:58:51.780" level="WARN">The chromedriver version (114.0.5735.90) detected in PATH at C:\Users\User\AppData\Local\Programs\Python\Python311\Scripts\chromedriver.exe might not be compatible with the detected chrome version (115.0.5790.171); currently, chromedriver 115.0.5790.170 is recommended for chrome 115.*, so it is advised to delete the driver in PATH and retry</msg>
+<status status="PASS" starttime="20230816 22:58:50.956" endtime="20230816 22:59:01.348"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20230816 22:25:59.672" endtime="20230816 22:25:59.796"/>
+<status status="PASS" starttime="20230816 22:59:01.349" endtime="20230816 22:59:01.467"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath://a[normalize-space()='Signup / Login']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230816 22:25:59.798" level="INFO">Clicking element 'xpath://a[normalize-space()='Signup / Login']'.</msg>
-<status status="PASS" starttime="20230816 22:25:59.797" endtime="20230816 22:26:01.551"/>
+<msg timestamp="20230816 22:59:01.468" level="INFO">Clicking element 'xpath://a[normalize-space()='Signup / Login']'.</msg>
+<status status="PASS" starttime="20230816 22:59:01.468" endtime="20230816 22:59:02.976"/>
 </kw>
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>Automation Exercise - Signup / Login</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20230816 22:26:01.569" level="INFO">Page title is 'Automation Exercise - Signup / Login'.</msg>
-<status status="PASS" starttime="20230816 22:26:01.553" endtime="20230816 22:26:01.569"/>
+<msg timestamp="20230816 22:59:02.985" level="INFO">Page title is 'Automation Exercise - Signup / Login'.</msg>
+<status status="PASS" starttime="20230816 22:59:02.976" endtime="20230816 22:59:02.985"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>css:input[data-qa='login-email']</arg>
 <arg>${EMAIL}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230816 22:26:01.572" level="INFO">Typing text 'automation01@gmail.com' into text field 'css:input[data-qa='login-email']'.</msg>
-<status status="PASS" starttime="20230816 22:26:01.570" endtime="20230816 22:26:01.771"/>
+<msg timestamp="20230816 22:59:02.986" level="INFO">Typing text 'automation01@gmail.com' into text field 'css:input[data-qa='login-email']'.</msg>
+<status status="PASS" starttime="20230816 22:59:02.986" endtime="20230816 22:59:03.198"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>css:input[placeholder='Password']</arg>
 <arg>${PASSWORD}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230816 22:26:01.774" level="INFO">Typing text '123456!a' into text field 'css:input[placeholder='Password']'.</msg>
-<status status="PASS" starttime="20230816 22:26:01.773" endtime="20230816 22:26:02.209"/>
+<msg timestamp="20230816 22:59:03.200" level="INFO">Typing text '123456!a' into text field 'css:input[placeholder='Password']'.</msg>
+<status status="PASS" starttime="20230816 22:59:03.199" endtime="20230816 22:59:03.332"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>css:button[data-qa='login-button']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230816 22:26:02.210" level="INFO">Clicking element 'css:button[data-qa='login-button']'.</msg>
-<msg timestamp="20230816 22:28:24.167" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: disconnected: not connected to DevTools
-  (failed to check if window was closed: disconnected: not connected to DevTools)
-  (Session info: chrome=115.0.5790.171)
-Stacktrace:
-Backtrace:
-	GetHandleVerifier [0x0072A813+48355]
-	(No symbol) [0x006BC4B1]
-	(No symbol) [0x005C5358]
-	(No symbol) [0x005B7D96]
-	(No symbol) [0x005B7AB9]
-	(No symbol) [0x005C67C0]
-	(No symbol) [0x0061C4D8]
-	(No symbol) [0x0060A536]
-	(No symbol) [0x005E82DC]
-	(No symbol) [0x005E93DD]
-	GetHandleVerifier [0x0098AABD+2539405]
-	GetHandleVerifier [0x009CA78F+2800735]
-	GetHandleVerifier [0x009C456C+2775612]
-	GetHandleVerifier [0x007B51E0+616112]
-	(No symbol) [0x006C5F8C]
-	(No symbol) [0x006C2328]
-	(No symbol) [0x006C240B]
-	(No symbol) [0x006B4FF7]
-	BaseThreadInitThunk [0x754C00C9+25]
-	RtlGetAppContainerNamedObjectPath [0x77337B1E+286]
-	RtlGetAppContainerNamedObjectPath [0x77337AEE+238]
-</msg>
-<msg timestamp="20230816 22:28:24.168" level="FAIL">WebDriverException: Message: unknown error: cannot determine loading status
-from disconnected: unable to send message to renderer
-  (Session info: chrome=115.0.5790.171)
-Stacktrace:
-Backtrace:
-	GetHandleVerifier [0x0072A813+48355]
-	(No symbol) [0x006BC4B1]
-	(No symbol) [0x005C5358]
-	(No symbol) [0x005B7120]
-	(No symbol) [0x005B77AA]
-	(No symbol) [0x005C0777]
-	(No symbol) [0x005CC668]
-	(No symbol) [0x005CF566]
-	(No symbol) [0x005B7BC3]
-	(No symbol) [0x005CC37A]
-	(No symbol) [0x0061CB1F]
-	(No symbol) [0x0060A536]
-	(No symbol) [0x005E82DC]
-	(No symbol) [0x005E93DD]
-	GetHandleVerifier [0x0098AABD+2539405]
-	GetHandleVerifier [0x009CA78F+2800735]
-	GetHandleVerifier [0x009C456C+2775612]
-	GetHandleVerifier [0x007B51E0+616112]
-	(No symbol) [0x006C5F8C]
-	(No symbol) [0x006C2328]
-	(No symbol) [0x006C240B]
-	(No symbol) [0x006B4FF7]
-	BaseThreadInitThunk [0x754C00C9+25]
-	RtlGetAppContainerNamedObjectPath [0x77337B1E+286]
-	RtlGetAppContainerNamedObjectPath [0x77337AEE+238]
-</msg>
-<status status="FAIL" starttime="20230816 22:26:02.210" endtime="20230816 22:28:24.172"/>
+<msg timestamp="20230816 22:59:03.333" level="INFO">Clicking element 'css:button[data-qa='login-button']'.</msg>
+<status status="PASS" starttime="20230816 22:59:03.333" endtime="20230816 22:59:22.224"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Login_User_Name}</var>
+<arg>css:li a&gt;b</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230816 22:59:22.251" level="INFO">${Login_User_Name} = Automation</msg>
+<status status="PASS" starttime="20230816 22:59:22.225" endtime="20230816 22:59:22.251"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${Login_User_Name}</arg>
+<arg>Automation</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20230816 22:59:22.252" endtime="20230816 22:59:22.252"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
-<arg>4s</arg>
+<arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20230816 22:28:24.172" endtime="20230816 22:28:24.172"/>
+<msg timestamp="20230816 22:59:25.252" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230816 22:59:22.252" endtime="20230816 22:59:25.252"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${TEST_CASES_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230816 22:59:25.252" level="INFO">Opening url 'https://www.automationexercise.com/test_cases'</msg>
+<status status="PASS" starttime="20230816 22:59:25.252" endtime="20230816 22:59:27.343"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230816 22:59:30.345" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230816 22:59:27.344" endtime="20230816 22:59:30.345"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>link: Cart</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230816 22:59:30.347" level="INFO">Clicking element 'link: Cart'.</msg>
+<status status="PASS" starttime="20230816 22:59:30.346" endtime="20230816 22:59:31.809"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="NOT RUN" starttime="20230816 22:28:24.173" endtime="20230816 22:28:24.173"/>
+<status status="PASS" starttime="20230816 22:59:31.809" endtime="20230816 22:59:34.130"/>
 </kw>
-<status status="FAIL" starttime="20230816 22:25:47.982" endtime="20230816 22:28:24.173">WebDriverException: Message: unknown error: cannot determine loading status
-from disconnected: unable to send message to renderer
-  (Session info: chrome=115.0.5790.171)
-Stacktrace:
-Backtrace:
-	GetHandleVerifier [0x0072A813+48355]
-	(No symbol) [0x006BC4B1]
-	(No symbol) [0x005C5358]
-	(No symbol) [0x005B7120]
-	(No symbol) [0x005B77AA]
-	(No symbol) [0x005C0777]
-	(No symbol) [0x005CC668]
-	(No symbol) [0x005CF566]
-	(No symbol) [0x005B7BC3]
-	(No symbol) [0x005CC37A]
-	(No symbol) [0x0061CB1F]
-	(No symbol) [0x0060A536]
-	(No symbol) [0x005E82DC]
-	(No symbol) [0x005E93DD]
-	GetHandleVerifier [0x0098AABD+2539405]
-	GetHandleVerifier [0x009CA78F+2800735]
-	GetHandleVerifier [0x009C456C+2775612]
-	GetHandleVerifier [0x007B51E0+616112]
-	(No symbol) [0x006C5F8C]
-	(No symbol) [0x006C2328]
-	(No symbol) [0x006C240B]
-	(No symbol) [0x006B4FF7]
-	BaseThreadInitThunk [0x754C00C9+25]
-	RtlGetAppContainerNamedObjectPath [0x77337B1E+286]
-	RtlGetAppContainerNamedObjectPath [0x77337AEE+238]
-</status>
+<status status="PASS" starttime="20230816 22:58:50.956" endtime="20230816 22:59:34.130"/>
 </test>
-<status status="FAIL" starttime="20230816 22:25:47.721" endtime="20230816 22:28:24.175"/>
+<status status="PASS" starttime="20230816 22:58:50.601" endtime="20230816 22:59:34.132"/>
 </suite>
-<status status="FAIL" starttime="20230816 22:25:47.718" endtime="20230816 22:28:24.177"/>
+<status status="PASS" starttime="20230816 22:58:50.597" endtime="20230816 22:59:34.134"/>
 </suite>
-<status status="FAIL" starttime="20230816 22:25:47.689" endtime="20230816 22:28:24.179"/>
+<status status="PASS" starttime="20230816 22:58:50.559" endtime="20230816 22:59:34.135"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="RobotFramework">RobotFramework</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1" name="Tests">RobotFramework.Tests</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="Exercise02">RobotFramework.Tests.Exercise02</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="RobotFramework">RobotFramework</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Tests">RobotFramework.Tests</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Exercise02">RobotFramework.Tests.Exercise02</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20230816 22:25:48.520" level="WARN">The chromedriver version (114.0.5735.90) detected in PATH at C:\Users\User\AppData\Local\Programs\Python\Python311\Scripts\chromedriver.exe might not be compatible with the detected chrome version (115.0.5790.171); currently, chromedriver 115.0.5790.170 is recommended for chrome 115.*, so it is advised to delete the driver in PATH and retry</msg>
-<msg timestamp="20230816 22:28:24.167" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: disconnected: not connected to DevTools
-  (failed to check if window was closed: disconnected: not connected to DevTools)
-  (Session info: chrome=115.0.5790.171)
-Stacktrace:
-Backtrace:
-	GetHandleVerifier [0x0072A813+48355]
-	(No symbol) [0x006BC4B1]
-	(No symbol) [0x005C5358]
-	(No symbol) [0x005B7D96]
-	(No symbol) [0x005B7AB9]
-	(No symbol) [0x005C67C0]
-	(No symbol) [0x0061C4D8]
-	(No symbol) [0x0060A536]
-	(No symbol) [0x005E82DC]
-	(No symbol) [0x005E93DD]
-	GetHandleVerifier [0x0098AABD+2539405]
-	GetHandleVerifier [0x009CA78F+2800735]
-	GetHandleVerifier [0x009C456C+2775612]
-	GetHandleVerifier [0x007B51E0+616112]
-	(No symbol) [0x006C5F8C]
-	(No symbol) [0x006C2328]
-	(No symbol) [0x006C240B]
-	(No symbol) [0x006B4FF7]
-	BaseThreadInitThunk [0x754C00C9+25]
-	RtlGetAppContainerNamedObjectPath [0x77337B1E+286]
-	RtlGetAppContainerNamedObjectPath [0x77337AEE+238]
-</msg>
+<msg timestamp="20230816 22:58:51.780" level="WARN">The chromedriver version (114.0.5735.90) detected in PATH at C:\Users\User\AppData\Local\Programs\Python\Python311\Scripts\chromedriver.exe might not be compatible with the detected chrome version (115.0.5790.171); currently, chromedriver 115.0.5790.170 is recommended for chrome 115.*, so it is advised to delete the driver in PATH and retry</msg>
 </errors>
 </robot>

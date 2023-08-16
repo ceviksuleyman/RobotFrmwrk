@@ -6,8 +6,9 @@ ${BROWSER}  chrome
 ${BASE_URL}  https://www.automationexercise.com/
 ${EMAIL}  automation01@gmail.com
 ${PASSWORD}  123456!a
-*** Test Cases ***
+${TEST_CASES_URL}   https://www.automationexercise.com/test_cases
 
+*** Test Cases ***
 LoginTest
   Open Browser  ${BASE_URL}    ${BROWSER}
   Maximize Browser Window
@@ -16,5 +17,10 @@ LoginTest
   Input Text    css:input[data-qa='login-email']  ${EMAIL}
   Input Text    css:input[placeholder='Password']  ${PASSWORD}
   Click Element    css:button[data-qa='login-button']
-  Sleep    4s
+  ${Login_User_Name}    Get Text     css:li a>b
+  Should Be Equal As Strings     ${Login_User_Name}     Automation
+  Sleep    3s
+  Go To    ${TEST_CASES_URL}
+  Sleep    3s
+  Click Element    link: Cart
   Close Browser
