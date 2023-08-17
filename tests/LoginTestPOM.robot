@@ -1,6 +1,6 @@
 *** Settings ***
 Library     SeleniumLibrary
-Resource  ../Resources/LoginKeywords.robot
+Resource  ../resources/LoginKeywords.robot
 
 *** Variables ***
 ${Browser}  chrome
@@ -16,6 +16,6 @@ Login Test
 	Enter Email    ${email}
 	Enter Password    ${pwd}
 	Click SignIn Btn
-	Verify Successfull Login
 	Sleep    2s
+	Verify Successfull Login
     Close My Browser
