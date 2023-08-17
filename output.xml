@@ -1,101 +1,102 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20230816 22:58:50.554" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20230817 18:11:44.309" rpa="false" schemaversion="4">
 <suite id="s1" name="RobotFramework" source="C:\Users\User\PycharmProjects\RobotFramework">
 <suite id="s1-s1" name="Tests" source="C:\Users\User\PycharmProjects\RobotFramework\tests">
-<suite id="s1-s1-s1" name="Exercise02" source="C:\Users\User\PycharmProjects\RobotFramework\tests\Exercise02.robot">
-<test id="s1-s1-s1-t1" name="LoginTest" line="12">
+<suite id="s1-s1-s1" name="LoginTestPOM" source="C:\Users\User\PycharmProjects\RobotFramework\tests\LoginTestPOM.robot">
+<test id="s1-s1-s1-t1" name="Login Test" line="13">
+<kw name="Open My Browser" library="LoginKeywords">
+<arg>${SiteUrl}</arg>
+<arg>${Browser}</arg>
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>${BASE_URL}</arg>
-<arg>${BROWSER}</arg>
+<arg>${SiteUrl}</arg>
+<arg>${Browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230816 22:58:50.957" level="INFO">Opening browser 'chrome' to base url 'https://www.automationexercise.com/'.</msg>
-<msg timestamp="20230816 22:58:51.780" level="WARN">The chromedriver version (114.0.5735.90) detected in PATH at C:\Users\User\AppData\Local\Programs\Python\Python311\Scripts\chromedriver.exe might not be compatible with the detected chrome version (115.0.5790.171); currently, chromedriver 115.0.5790.170 is recommended for chrome 115.*, so it is advised to delete the driver in PATH and retry</msg>
-<status status="PASS" starttime="20230816 22:58:50.956" endtime="20230816 22:59:01.348"/>
+<msg timestamp="20230817 18:11:44.603" level="INFO">Opening browser 'chrome' to base url 'https://www.automationexercise.com/'.</msg>
+<msg timestamp="20230817 18:11:45.093" level="WARN">The chromedriver version (114.0.5735.90) detected in PATH at C:\Users\User\AppData\Local\Programs\Python\Python311\Scripts\chromedriver.exe might not be compatible with the detected chrome version (115.0.5790.171); currently, chromedriver 115.0.5790.170 is recommended for chrome 115.*, so it is advised to delete the driver in PATH and retry</msg>
+<status status="PASS" starttime="20230817 18:11:44.602" endtime="20230817 18:11:51.729"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20230816 22:59:01.349" endtime="20230816 22:59:01.467"/>
+<status status="PASS" starttime="20230817 18:11:51.729" endtime="20230817 18:11:51.847"/>
 </kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath://a[normalize-space()='Signup / Login']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230816 22:59:01.468" level="INFO">Clicking element 'xpath://a[normalize-space()='Signup / Login']'.</msg>
-<status status="PASS" starttime="20230816 22:59:01.468" endtime="20230816 22:59:02.976"/>
+<status status="PASS" starttime="20230817 18:11:44.601" endtime="20230817 18:11:51.847"/>
 </kw>
-<kw name="Title Should Be" library="SeleniumLibrary">
-<arg>Automation Exercise - Signup / Login</arg>
-<doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20230816 22:59:02.985" level="INFO">Page title is 'Automation Exercise - Signup / Login'.</msg>
-<status status="PASS" starttime="20230816 22:59:02.976" endtime="20230816 22:59:02.985"/>
+<kw name="Click Login Link" library="LoginKeywords">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${link_loginSignup}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230817 18:11:51.849" level="INFO">Clicking link 'xpath://a[normalize-space()='Signup / Login']'.</msg>
+<status status="PASS" starttime="20230817 18:11:51.848" endtime="20230817 18:11:53.159"/>
 </kw>
+<status status="PASS" starttime="20230817 18:11:51.848" endtime="20230817 18:11:53.160"/>
+</kw>
+<kw name="Enter Email" library="LoginKeywords">
+<arg>${email}</arg>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>css:input[data-qa='login-email']</arg>
-<arg>${EMAIL}</arg>
+<arg>${txt_loginUserEmail}</arg>
+<arg>${Email}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230816 22:59:02.986" level="INFO">Typing text 'automation01@gmail.com' into text field 'css:input[data-qa='login-email']'.</msg>
-<status status="PASS" starttime="20230816 22:59:02.986" endtime="20230816 22:59:03.198"/>
+<msg timestamp="20230817 18:11:53.162" level="INFO">Typing text 'automation01@gmail.com' into text field 'css:input[data-qa='login-email']'.</msg>
+<status status="PASS" starttime="20230817 18:11:53.161" endtime="20230817 18:11:53.291"/>
 </kw>
+<status status="PASS" starttime="20230817 18:11:53.160" endtime="20230817 18:11:53.291"/>
+</kw>
+<kw name="Enter Password" library="LoginKeywords">
+<arg>${pwd}</arg>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>css:input[placeholder='Password']</arg>
-<arg>${PASSWORD}</arg>
+<arg>${txt_loginPassword}</arg>
+<arg>${Password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230816 22:59:03.200" level="INFO">Typing text '123456!a' into text field 'css:input[placeholder='Password']'.</msg>
-<status status="PASS" starttime="20230816 22:59:03.199" endtime="20230816 22:59:03.332"/>
+<msg timestamp="20230817 18:11:53.293" level="INFO">Typing text '123456!a' into text field 'css:input[placeholder='Password']'.</msg>
+<status status="PASS" starttime="20230817 18:11:53.292" endtime="20230817 18:11:53.459"/>
 </kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>css:button[data-qa='login-button']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230816 22:59:03.333" level="INFO">Clicking element 'css:button[data-qa='login-button']'.</msg>
-<status status="PASS" starttime="20230816 22:59:03.333" endtime="20230816 22:59:22.224"/>
+<status status="PASS" starttime="20230817 18:11:53.292" endtime="20230817 18:11:53.459"/>
 </kw>
+<kw name="Click SignIn Btn" library="LoginKeywords">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${btn_signIn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230817 18:11:53.461" level="INFO">Clicking button 'css:button[data-qa='login-button']'.</msg>
+<status status="PASS" starttime="20230817 18:11:53.461" endtime="20230817 18:12:32.027"/>
+</kw>
+<status status="PASS" starttime="20230817 18:11:53.460" endtime="20230817 18:12:32.027"/>
+</kw>
+<kw name="Verify Successfull Login" library="LoginKeywords">
 <kw name="Get Text" library="SeleniumLibrary">
 <var>${Login_User_Name}</var>
 <arg>css:li a&gt;b</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20230816 22:59:22.251" level="INFO">${Login_User_Name} = Automation</msg>
-<status status="PASS" starttime="20230816 22:59:22.225" endtime="20230816 22:59:22.251"/>
+<msg timestamp="20230817 18:12:32.055" level="INFO">${Login_User_Name} = Automation</msg>
+<status status="PASS" starttime="20230817 18:12:32.028" endtime="20230817 18:12:32.055"/>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <arg>${Login_User_Name}</arg>
 <arg>Automation</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" starttime="20230816 22:59:22.252" endtime="20230816 22:59:22.252"/>
+<status status="PASS" starttime="20230817 18:12:32.055" endtime="20230817 18:12:32.055"/>
+</kw>
+<status status="PASS" starttime="20230817 18:12:32.028" endtime="20230817 18:12:32.056"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
-<arg>3s</arg>
+<arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230816 22:59:25.252" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20230816 22:59:22.252" endtime="20230816 22:59:25.252"/>
+<msg timestamp="20230817 18:12:34.056" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230817 18:12:32.056" endtime="20230817 18:12:34.056"/>
 </kw>
-<kw name="Go To" library="SeleniumLibrary">
-<arg>${TEST_CASES_URL}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20230816 22:59:25.252" level="INFO">Opening url 'https://www.automationexercise.com/test_cases'</msg>
-<status status="PASS" starttime="20230816 22:59:25.252" endtime="20230816 22:59:27.343"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>3s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230816 22:59:30.345" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20230816 22:59:27.344" endtime="20230816 22:59:30.345"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>link: Cart</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230816 22:59:30.347" level="INFO">Clicking element 'link: Cart'.</msg>
-<status status="PASS" starttime="20230816 22:59:30.346" endtime="20230816 22:59:31.809"/>
-</kw>
+<kw name="Close My Browser" library="LoginKeywords">
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20230816 22:59:31.809" endtime="20230816 22:59:34.130"/>
+<status status="PASS" starttime="20230817 18:12:34.056" endtime="20230817 18:12:36.225"/>
 </kw>
-<status status="PASS" starttime="20230816 22:58:50.956" endtime="20230816 22:59:34.130"/>
+<status status="PASS" starttime="20230817 18:12:34.056" endtime="20230817 18:12:36.225"/>
+</kw>
+<status status="PASS" starttime="20230817 18:11:44.601" endtime="20230817 18:12:36.226"/>
 </test>
-<status status="PASS" starttime="20230816 22:58:50.601" endtime="20230816 22:59:34.132"/>
+<status status="PASS" starttime="20230817 18:11:44.344" endtime="20230817 18:12:36.227"/>
 </suite>
-<status status="PASS" starttime="20230816 22:58:50.597" endtime="20230816 22:59:34.134"/>
+<status status="PASS" starttime="20230817 18:11:44.341" endtime="20230817 18:12:36.229"/>
 </suite>
-<status status="PASS" starttime="20230816 22:58:50.559" endtime="20230816 22:59:34.135"/>
+<status status="PASS" starttime="20230817 18:11:44.313" endtime="20230817 18:12:36.230"/>
 </suite>
 <statistics>
 <total>
@@ -106,10 +107,10 @@
 <suite>
 <stat pass="1" fail="0" skip="0" id="s1" name="RobotFramework">RobotFramework</stat>
 <stat pass="1" fail="0" skip="0" id="s1-s1" name="Tests">RobotFramework.Tests</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Exercise02">RobotFramework.Tests.Exercise02</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="LoginTestPOM">RobotFramework.Tests.LoginTestPOM</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20230816 22:58:51.780" level="WARN">The chromedriver version (114.0.5735.90) detected in PATH at C:\Users\User\AppData\Local\Programs\Python\Python311\Scripts\chromedriver.exe might not be compatible with the detected chrome version (115.0.5790.171); currently, chromedriver 115.0.5790.170 is recommended for chrome 115.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg timestamp="20230817 18:11:45.093" level="WARN">The chromedriver version (114.0.5735.90) detected in PATH at C:\Users\User\AppData\Local\Programs\Python\Python311\Scripts\chromedriver.exe might not be compatible with the detected chrome version (115.0.5790.171); currently, chromedriver 115.0.5790.170 is recommended for chrome 115.*, so it is advised to delete the driver in PATH and retry</msg>
 </errors>
 </robot>
