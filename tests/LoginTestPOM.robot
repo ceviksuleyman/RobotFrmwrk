@@ -16,6 +16,5 @@ Login Test
 	Enter Email    ${email}
 	Enter Password    ${pwd}
 	Click SignIn Btn
-	Sleep    2s
 	Verify Successfull Login
     Close My Browser
