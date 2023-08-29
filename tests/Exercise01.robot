@@ -12,4 +12,4 @@ Automation Exercise
 #pip install robotframework
 #pip install robotframework-seleniumlibrary
 #pip install webdrivermanager
-#pip install selenium==4.9.1
+#pip install selenium==4.11.2
